@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  blazorapp:
+    image: ${DOCKER_REGISTRY-}blazorapp
+    build:
+      context: src/BlazorApp/
+      dockerfile: Dockerfile

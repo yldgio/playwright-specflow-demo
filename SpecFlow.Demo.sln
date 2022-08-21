@@ -9,17 +9,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "src\BlazorApp\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D6EFAAC6-7711-49C9-828A-2BF12B5FC793}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.TestsSpec", "tests\BlazorApp.TestsSpec\BlazorApp.TestsSpec.csproj", "{0A81BED6-B1F0-405A-AC76-4A5E7C1B3D9D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-files", "solution-files", "{97BCE56E-6ED7-4DF6-A651-2E073900B5AA}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
-		docker-compose.override.yml = docker-compose.override.yml
 		docker-compose.yml = docker-compose.yml
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Tests.Acceprance", "tests\BlazorApp.Tests.Acceprance\BlazorApp.Tests.Acceprance.csproj", "{127C02A8-5402-441A-9E9B-2A6C77A724BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,17 +30,17 @@ Global
 		{C8056468-4BCD-491D-9BAB-893EE47E2974}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8056468-4BCD-491D-9BAB-893EE47E2974}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8056468-4BCD-491D-9BAB-893EE47E2974}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A81BED6-B1F0-405A-AC76-4A5E7C1B3D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A81BED6-B1F0-405A-AC76-4A5E7C1B3D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A81BED6-B1F0-405A-AC76-4A5E7C1B3D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A81BED6-B1F0-405A-AC76-4A5E7C1B3D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{127C02A8-5402-441A-9E9B-2A6C77A724BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{127C02A8-5402-441A-9E9B-2A6C77A724BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{127C02A8-5402-441A-9E9B-2A6C77A724BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{127C02A8-5402-441A-9E9B-2A6C77A724BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C8056468-4BCD-491D-9BAB-893EE47E2974} = {596ECECC-D72C-4D43-B2DC-1ED00ADF187C}
-		{0A81BED6-B1F0-405A-AC76-4A5E7C1B3D9D} = {D6EFAAC6-7711-49C9-828A-2BF12B5FC793}
+		{127C02A8-5402-441A-9E9B-2A6C77A724BD} = {D6EFAAC6-7711-49C9-828A-2BF12B5FC793}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E6BF0CC-B7D4-4C25-A7E4-F03FD2A679B1}

@@ -1,7 +1,7 @@
 using System;
 using TechTalk.SpecFlow;
 
-namespace BlazorApp.TestsSpec.StepDefinitions
+namespace BlazorApp.Tests.Acceprance.StepDefinitions
 {
     [Binding]
     public class ManageTodoListSteps

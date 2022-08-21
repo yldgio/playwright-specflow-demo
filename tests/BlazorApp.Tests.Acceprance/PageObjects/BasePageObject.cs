@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorApp.TestsSpec.PageObjects
+namespace BlazorApp.Tests.Acceprance.PageObjects
 {
     public abstract class BasePageObject
     {
-        public abstract string PagePath { get; }
+        public abstract string PagePath { get; init; }
         public abstract IPage Page { get; set; }
-        public abstract IBrowser Browser { get; }
+        public abstract IBrowserContext Browser { get; }
 
         public async Task NavigateAsync() {
             Page = await Browser.NewPageAsync();

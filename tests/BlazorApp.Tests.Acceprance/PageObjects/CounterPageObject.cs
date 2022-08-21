@@ -5,17 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorApp.TestsSpec.PageObjects
+namespace BlazorApp.Tests.Acceprance.PageObjects
 {
     public class CounterPageObject : BasePageObject
     {
-        public override string PagePath => "http://localhost:5109/counter";
-        public CounterPageObject(IBrowser browser)
+        public override string PagePath { get; init; }// => "http://localhost:5109/counter";
+        public CounterPageObject(IBrowserContext browser, string baseUrl)
         {
             Browser = browser;
+            PagePath = $"{baseUrl}/counter";
         }
         public override IPage Page { get; set; }
-        public override IBrowser Browser { get; }
+        public override IBrowserContext Browser { get; }
 
         public async Task ClickIncreaseButton() => await Page.ClickAsync("#increase-btn");
 

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace BlazorApp.TestsSpec.Features
+namespace BlazorApp.Tests.Acceprance.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -33,7 +33,7 @@ namespace BlazorApp.TestsSpec.Features
 #line 1 "Counter.feature"
 #line hidden
         
-        public CounterShouldBeProperlyIncrementingItsValueFeature(CounterShouldBeProperlyIncrementingItsValueFeature.FixtureData fixtureData, BlazorApp_TestsSpec_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CounterShouldBeProperlyIncrementingItsValueFeature(CounterShouldBeProperlyIncrementingItsValueFeature.FixtureData fixtureData, BlazorApp_Tests_Acceprance_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();

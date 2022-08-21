@@ -1,4 +1,4 @@
-namespace BlazorApp.TestsSpec.StepDefinitions
+namespace BlazorApp.Tests.Acceprance.StepDefinitions
 {
     [Binding]
     public sealed class CalculatorStepDefinitions

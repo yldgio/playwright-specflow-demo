@@ -1,14 +1,17 @@
-﻿using BlazorApp.TestsSpec.PageObjects;
+﻿using BlazorApp.Tests.Acceprance.PageObjects;
 using BoDi;
+
+using Microsoft.Extensions.Configuration;
 using Microsoft.Playwright;
 using TechTalk.SpecFlow;
 
-namespace BlazorApp.TestsSpec.Hooks
+namespace BlazorApp.Tests.Acceprance.Hooks
 {
     [Binding]
     public sealed class PlaywrightHooks
     {
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
+        private readonly IConfiguration _config = TestUtils.LoadConfiguration();
 
         [BeforeScenario("@Counter")]
         public async Task BeforeCounterScenario(IObjectContainer container)
@@ -23,15 +26,17 @@ namespace BlazorApp.TestsSpec.Hooks
             //    Headless = false,
             //    SlowMo = 2000
             //}); //open browser
-            var pageObject = new CounterPageObject(browser);
+
+            var baseUrl = _config[TestUtils.AppBaseUrlKey];
+            var pageObject = new CounterPageObject(browser, baseUrl);
             container.RegisterInstanceAs(playwright);
             container.RegisterInstanceAs(browser);
             container.RegisterInstanceAs(pageObject);
 
         }
 
-        [AfterScenario]
-        public async void AfterScenario(IObjectContainer container)
+        [AfterScenario("@Counter")]
+        public async Task AfterScenario(IObjectContainer container)
         {
             var browser = container.Resolve<IBrowser>();
             await browser.CloseAsync();

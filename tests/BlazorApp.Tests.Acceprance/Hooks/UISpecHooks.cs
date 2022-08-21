@@ -56,8 +56,8 @@ namespace BlazorApp.Tests.Acceprance.Hooks
             //var browser = await playwright.Chromium.LaunchAsync(); //launch browser headless
             var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = false,
-                SlowMo = 1000
+                //Headless = false,
+                SlowMo = 500
             });
             var context = await browser.NewContextAsync();
             var baseUrl = config[TestUtils.AppBaseUrlKey];
